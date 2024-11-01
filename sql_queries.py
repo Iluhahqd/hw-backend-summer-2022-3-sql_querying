@@ -17,18 +17,7 @@ SELECT flight_no, (scheduled_arrival - scheduled_departure) AS duration FROM fli
 # количество упоминаний которых меньше 50
 # В ответе должно быть 2 колонки [flight_no, count]
 TASK_2_QUERY = """
-SELECT 
-    flight_no,
-    COUNT(*) AS count
-FROM 
-    flights
-GROUP BY 
-    flight_no
-HAVING 
-    COUNT(*) < 50
-ORDER BY 
-    count DESC
-LIMIT 3;
+SELECT flight_no, COUNT(*) AS count FROM flights zGROUP BY flight_no HAVING COUNT(*) < 50 ORDER BY count DESC LIMIT 3;
 """
 #  flight_no | count
 # -----------+-------
