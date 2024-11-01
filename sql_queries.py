@@ -36,6 +36,7 @@ TASK_2_QUERY = """
 # Вывести число перелетов внутри одной таймзоны
 # Нужно вывести 1 значение в колонке count
 TASK_3_QUERY = """
+
 SELECT 
     (SELECT COUNT(*) FROM flights AS f_inner
      JOIN airports_data AS dep_inner ON f_inner.departure_airport = dep_inner.airport_code) 
